@@ -11,6 +11,7 @@ load_dotenv()
 
 # Get API key from environment variable
 API_KEY = os.getenv("API_KEY")
+Font_URL = os.getenv("Font_URL")
 
 
 if not API_KEY:
@@ -27,7 +28,7 @@ app = FastAPI(
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://bistarfrontend-production.up.railway.app"],
+    allow_origins=["Font_URL"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
